@@ -76,3 +76,19 @@ for i in range(0,num):
     for j in range(0,i+1):
         print("*",end="")
     print()
+
+#reverse the digit of a given number
+num= input("Enter the number")
+print(num[::-1])
+
+#string to check if it is PALINDROME or not
+
+A = input("enter a string")
+rev = A[::-1]
+print(rev)
+print (A)
+if rev == A:
+    print("string is palindrome")
+else:
+    print("Not a Palindrome")
+
