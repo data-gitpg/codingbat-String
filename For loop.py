@@ -9,6 +9,15 @@ x=1
 for i in range(1,11,2):
     print (i)
 
+#check prime number - which has only  two factors 1 and itself
+num= int(input("enter a number"))
+for i in range(2,num):
+    if num%i==0:
+        print(num,"is not prime")
+        break
+else:
+    print(num, "is prime")
+
 #display numbers in descending order
 
 for i in range(10,0,-1):
@@ -92,3 +101,55 @@ if rev == A:
 else:
     print("Not a Palindrome")
 
+#multiplication table
+num=int(input("enter a number"))
+for i in range(1,21):
+    print(num*i)
+
+#count the number of digits in a number
+num=int(input("enter a number"))
+count=0
+while num>0:
+    count=count+1
+    num=num//10
+print("count is :", count)
+
+#count the vowels in a given sentence
+
+#ONE WAY USING LIST
+sentence= input("enter the sentence")
+list1 =["a","e","i","o","u"]
+count=0
+for char in sentence:
+    if char in list1:
+        count=count+1
+print(count)
+
+#ANOTHER WAY :
+sentence= input("enter the sentence")
+vowels='aeiouAEIOU'
+count=0
+for char in sentence:
+    if char in vowels:
+        count=count+1
+print(count)
+
+#ARMSTRONG NUMBER CHECK
+#A positive integer is called an Armstrong number of order n if
+#abcd... = a^n + b^n + c^n + d^n + ...
+
+#In case of an Armstrong number of 3 digits, the sum of cubes of each digit is equal to the number itself.
+#153 = 1*1*1 + 5*5*5 + 3*3*3 = 1 + 125 + 27 = 153"""
+
+n=int(input("enter the number\n"))
+sum=0
+order=len(str(n))
+copy_n =n
+while n>0:
+    digit=n%10
+    sum= sum+digit**order
+    n=n//10
+if sum==copy_n:
+    print(f"{copy_n} is an armstrong number")
+else:
+    print(f"{copy_n} is NOT an armstrong number")
