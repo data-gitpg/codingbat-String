@@ -1,5 +1,26 @@
 #print("Hello World")
 
+# find second largest number in a list using a loop
+
+lst = [2,5,3,7,56,34,67,33]
+
+lst.sort()
+print(lst)
+
+print("first largest number is", lst[-1])
+print("second largest number is", lst[-2])
+
+
+#second method - find second largest number in a list using a loop
+
+lst = [2,5,3,7,56,34,67,33]
+
+lst.remove(max(lst))  #remove largest number from list
+print(lst)  # print list without maximum number
+print("second largest number is  ", max(lst))
+
+
+
 #Swap two numbers
 a,b = [int(x) for x in input("enter two numbers").split(',')]
 temp=a
@@ -7,6 +28,54 @@ a=b
 b=temp
 
 print(a,b)
+
+# Sum of two numbers - input in same line
+
+a,b = [int(x) for x in input("enter two numbers").split()]
+print ("the sum of a and b is", a+b)
+
+# sum of  two numbers separated by commas and print sum
+
+a,b = [int(x) for x in input("enter two numbers separated by commas").split(',')]
+print ("the sum of a and b is", a+b)
+
+#sum of two numbers using command line arguments
+
+import sys
+
+a= int(sys.srgv[1])
+b= int(sys.argv[2])
+c= a+b
+print (c)
+
+#sum of even numbers using command line arguments
+import sys
+
+
+args=sys.argv[1:]
+print(args)
+sum=0
+for a in args:
+    x= int (a)
+    if x%2==0:
+        sum+=x
+
+print("sum of evens are: " , sum)
+
+
+
+#here its above output . go to command prompt cmd . python test.py 5 6 o/p: 11
+
+
+# swap two variables without using third variable
+a1=5
+b1=6
+a1=a1+b1
+b1=a1-b1
+a1=a1+b1
+
+print(a)
+print(b)
 
 #Check even or odd
 num= int(input("enter a number"))
@@ -89,6 +158,13 @@ while num>0:
     num=num//10
 print("sum is", sum)
 
+#string to check if it is PALINDROME or not
 
-
-
+A = input("enter a string")
+rev = A[::-1]
+print(rev)
+print (A)
+if rev == A:
+    print("string is palindrome")
+else:
+    print("Not a Palindrome")
